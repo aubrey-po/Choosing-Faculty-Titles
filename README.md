@@ -1,10 +1,12 @@
 # Choosing Faculty Titles
 
-A static GitHub Pages site for a practical faculty title guide.
+A static GitHub Pages copy of the Whiting School of Engineering Faculty Title Guide. It includes the complete decision guide, 18 faculty title outcomes, a searchable title directory, appointment privileges, and clickable SmartPath links.
+
+Public site: https://aubrey-po.github.io/Choosing-Faculty-Titles/
 
 ## Local preview
 
-Open `index.html` directly in a browser or run a simple local server:
+Run a simple local server (the guide uses JavaScript modules):
 
 ```bash
 python3 -m http.server 8000
