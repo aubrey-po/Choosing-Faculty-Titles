@@ -634,9 +634,8 @@ export const outcomes = {
     "procedures": [],
     "resources": [],
     "nextStep": "Contact GELL for the appropriate student or postdoctoral appointment process.",
-    "contactName": "Office of Faculty Affairs",
-    "email": "wseacademicappta@jhu.edu",
-    "sourceNote": "The source says “Contact GELL**” and does not provide a GELL contact or link. Faculty Affairs can help confirm the routing."
+    "contactName": "GELL",
+    "email": "wsepostdocappts@jhu.edu"
   },
   "17": {
     "id": 17,

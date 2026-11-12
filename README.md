@@ -20,4 +20,4 @@ This repository is configured as a static site. GitHub Pages will serve the root
 
 The guide links the full WSE policies and procedures and routes tenure-track help to Sheri Green at wsetenureactions@jh.edu. It does not collect candidate information.
 
-Source notes: the new research-compensation checkpoint at step 36 is included before step 37, correcting the source's otherwise unreachable route. The document's unspecified courtesy dossier contents and GELL contact are marked for confirmation in the app.
+Source notes: the new research-compensation checkpoint at step 36 is included before step 37, correcting the source's otherwise unreachable route. The document's unspecified courtesy dossier contents are marked for confirmation in the app. GELL referrals use the user-supplied address wsepostdocappts@jhu.edu.
