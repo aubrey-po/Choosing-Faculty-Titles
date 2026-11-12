@@ -445,7 +445,7 @@ export const outcomes = {
       "May supervise",
       "May serve as PI"
     ],
-    "detail": "Research Professors may supervise master’s and doctoral theses, supervise postdoctoral fellows, and serve as principal investigator on grants. Teaching may be undertaken when appropriate, but teaching should not be a primary source of support for anyone on the research professor track.",
+    "detail": "",
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
     ],
@@ -470,7 +470,7 @@ export const outcomes = {
       "May supervise",
       "May serve as PI"
     ],
-    "detail": "Associate Research Professors may supervise master’s and doctoral theses, supervise postdoctoral fellows, and serve as principal investigator on grants. They may teach when appropriate, but teaching should not be a primary source of support for anyone on the research professor track.",
+    "detail": "",
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
     ],
@@ -495,7 +495,7 @@ export const outcomes = {
       "May supervise",
       "May serve as PI"
     ],
-    "detail": "Assistant Research Professors may supervise master’s and doctoral theses, supervise postdoctoral fellows, and serve as principal investigator on grants. They may teach when appropriate, but teaching should not be a primary source of support for anyone on the research professor track.",
+    "detail": "",
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
     ],
