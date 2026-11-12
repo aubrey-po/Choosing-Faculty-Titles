@@ -17,10 +17,14 @@ function criteriaSection(rank) {
 function sourceNote(rank) {
   return rank.sourceNote?`<div class="result-note"><span aria-hidden="true">i</span><p>${esc(rank.sourceNote)}</p></div>`:'';
 }
+function procedureList(steps) {
+  if(steps.length===1) return `<p class="procedure-single">${esc(steps[0])}</p>`;
+  return steps.length?`<ol class="procedure-list">${steps.map(text=>`<li>${esc(text)}</li>`).join('')}</ol>`:'';
+}
 function appointmentNextStep(rank, includeAlternative=false) {
   const resources=rank.resources?.length?`<div class="procedure-resources">${rank.resources.map(resource=>`<a href="${esc(resource.url)}" target="_blank" rel="noopener noreferrer">${esc(resource.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div>`:'';
-  const steps=rank.procedures.length?`<h4>Dossier and review</h4><ol class="procedure-list">${rank.procedures.map(text=>`<li>${esc(text)}</li>`).join('')}</ol>`:'';
-  const alternative=includeAlternative&&rank.alternativePathway?`<section class="alternate-pathway" aria-label="Incoming or outgoing tenure-track faculty"><h4>${esc(rank.alternativePathway.heading)}</h4>${rank.alternativePathway.criteria.map(text=>`<p>${esc(text)}</p>`).join('')}<ol class="procedure-list">${rank.alternativePathway.procedures.map(text=>`<li>${esc(text)}</li>`).join('')}</ol></section>`:'';
+  const steps=rank.procedures.length?`<h4>Dossier and review</h4>${procedureList(rank.procedures)}`:'';
+  const alternative=includeAlternative&&rank.alternativePathway?`<section class="alternate-pathway" aria-label="Incoming or outgoing tenure-track faculty"><h4>${esc(rank.alternativePathway.heading)}</h4>${rank.alternativePathway.criteria.map(text=>`<p>${esc(text)}</p>`).join('')}${procedureList(rank.alternativePathway.procedures)}</section>`:'';
   return `<section class="appointment-next-step" aria-label="Next steps"><h3>Next steps</h3><p>${esc(rank.nextStep).replaceAll('SmartPath', `<a href="${SMARTPATH_URL}" target="_blank" rel="noopener noreferrer">SmartPath</a>`)}</p>${resources}${steps}${sourceNote(rank)}${alternative}<p class="next-step-contact">Direct questions to: ${esc(rank.contactName)}<br><a href="mailto:${esc(rank.email)}">${esc(rank.email)}</a></p><a class="full-procedures-link" href="${PROCEDURES_URL}" target="_blank" rel="noopener noreferrer">View full policies and procedures <span aria-hidden="true">↗</span></a></section>`;
 }
 function permissionGrid(rank) {
@@ -52,7 +56,7 @@ function renderHistory() {
 }
 function summaryText() {
   const privileges=current.permissions?`\n\nPrivileges at a glance\n${current.permissions.map((value,i)=>`${permissionLabels[i]}: ${value}`).join('\n')}`:'';
-  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${current.detail}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>`${i+1}. ${text}`).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.contactName} ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact Sheri Green: ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline uploaded November 12, 2026).`;
+  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${current.detail}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.contactName} ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact Sheri Green: ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline uploaded November 12, 2026).`;
 }
 async function copyRecommendation() {
   const content=summaryText();
