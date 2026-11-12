@@ -446,6 +446,7 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
     ],
@@ -471,6 +472,7 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
     ],
@@ -496,6 +498,7 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
     ],
@@ -559,6 +562,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Visiting Professors may co-advise master’s theses. They may co-advise doctoral theses and co-supervise postdoctoral fellows on a case-by-case basis. Visiting professors cannot serve as principal investigators on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV.",
       "All tenured faculty (or a standing committee) must vote.",
@@ -585,6 +589,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Visiting Associate Professors may co-advise master’s theses. They may co-advise doctoral theses and co-supervise postdoctoral fellows on a case-by-case basis. Visiting professors cannot serve as principal investigators on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV.",
       "All tenured faculty (or a standing committee) must vote.",
@@ -611,6 +616,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Visiting Assistant Professors may co-advise master’s theses. They may co-advise doctoral theses and co-supervise postdoctoral fellows on a case-by-case basis. Visiting professors cannot serve as principal investigators on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV.",
       "All tenured faculty (or a standing committee) must vote.",
@@ -627,6 +633,7 @@ export const outcomes = {
     "title": "Contact GELL",
     "group": "Student or postdoctoral appointment",
     "kind": "contact",
+    "contactOnly": true,
     "criteria": [
       "A visiting or courtesy appointment is under consideration, but the candidate does not have a primary JHU appointment or one of the listed outside professorial titles. Their proposed WSE role is a student or postdoc."
     ],
@@ -652,6 +659,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Visiting scholars cannot supervise master’s or doctoral theses or supervise postdoctoral fellows. They cannot serve as principal investigators on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required.",
       "The Department or Unit Head/Director writes a letter to the Dean, including: 1) a statement on professionalism; and 2) a summary of the candidate’s qualifications."
@@ -677,6 +685,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Whiting Fellows cannot supervise master’s or doctoral theses or supervise postdoctoral fellows. They cannot serve as principal investigators on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required.",
       "The Department or Unit Head/Director writes a letter to the Dean, including: 1) a statement on professionalism; and 2) a summary of the candidate’s qualifications."
@@ -702,6 +711,7 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Professors of the practice may supervise master’s and doctoral theses and serve as principal investigator on grants. They may advise doctoral students and supervise postdoctoral fellows on a case-by-case basis.",
+    "privilegeNotes": [],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of three external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
       "All full-time professorial track faculty at the full professor rank are required to vote.",
@@ -737,6 +747,7 @@ export const outcomes = {
       "Teaching or research grants"
     ],
     "detail": "Full Teaching Professors may supervise master’s theses, co-advise doctoral theses, co-supervise postdoctoral fellows, and serve as principal investigator on teaching or research grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of four external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
       "All full-time professorial track faculty at the full professor rank are required to vote.",
@@ -772,6 +783,7 @@ export const outcomes = {
       "Teaching or research grants"
     ],
     "detail": "Associate Teaching Professors may supervise master’s theses, co-advise doctoral theses, co-supervise postdoctoral fellows, and serve as principal investigator on teaching or research grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of three external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
       "All full-time professorial track faculty at the full or associate professor rank are required to vote."
@@ -806,6 +818,7 @@ export const outcomes = {
       "Teaching or research grants"
     ],
     "detail": "Assistant teaching professors may supervise master’s theses, co-advise doctoral theses, co-supervise postdoctoral fellows, and serve as principal investigator on teaching or research grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request, CV, external evaluations, correspondence with referees, and teaching dossier.",
       "The Department or Unit Head/Director solicits enough referees to obtain a minimum of three external evaluations. There is no standard template letter. These evaluators should be external to the candidate’s department or unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
@@ -833,6 +846,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Senior lecturers can co-advise master’s theses on a case-by-case basis. They cannot supervise doctoral theses, supervise postdoctoral fellows, or serve as principal investigator on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request, CV, and teaching dossier. No faculty vote is required."
     ],
@@ -857,6 +871,7 @@ export const outcomes = {
       "Not permitted"
     ],
     "detail": "Lecturers may co-advise master’s theses on a case-by-case basis. They cannot supervise doctoral theses, supervise postdoctoral fellows, or serve as principal investigator on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request, CV, and teaching dossier. No faculty vote is required."
     ],
@@ -881,6 +896,9 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Research Professors may supervise master’s and doctoral theses, supervise postdoctoral fellows, and serve as principal investigator on grants. Teaching may be undertaken when appropriate, but teaching should not be a primary source of support for anyone on the research professor track.",
+    "privilegeNotes": [
+      "Teaching may be undertaken when appropriate, but teaching should not be a primary source of support for anyone on the research professor track."
+    ],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of four external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
       "All full-time professorial track faculty at the full professor rank are required to vote.",
@@ -925,6 +943,9 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Associate Research Professors may supervise master’s and doctoral theses, supervise postdoctoral fellows, and serve as principal investigator on grants. They may teach when appropriate, but teaching should not be a primary source of support for anyone on the research professor track.",
+    "privilegeNotes": [
+      "They may teach when appropriate, but teaching should not be a primary source of support for anyone on the research professor track."
+    ],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of three external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
       "All full-time professorial track faculty at the full and associate professor rank are required to vote.",
@@ -969,6 +990,9 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Assistant Research Professors may supervise master’s and doctoral theses, supervise postdoctoral fellows, and serve as principal investigator on grants. They may teach when appropriate, but teaching should not be a primary source of support for anyone on the research professor track.",
+    "privilegeNotes": [
+      "They may teach when appropriate, but teaching should not be a primary source of support for anyone on the research professor track."
+    ],
     "procedures": [
       "The dossier includes a department request, CV, external evaluations, correspondence with referees, and research statement.",
       "The Department or Unit Head/Director solicits enough referees to obtain a minimum of three external evaluations. There is no standard template letter. At least one, and preferably more, of these evaluators should be external to the candidate’s current and previous department(s) and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
@@ -1005,6 +1029,9 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Senior research scientists/engineers may co-advise master’s theses or doctoral theses on a case-by-case basis. They can supervise postdoctoral fellows and serve as principal investigators on grants. Senior research scientists/engineers may teach, but teaching should not be a primary source of support for anyone on the research scientist/engineer track.",
+    "privilegeNotes": [
+      "Senior research scientists/engineers may teach, but teaching should not be a primary source of support for anyone on the research scientist/engineer track."
+    ],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required.",
       "The Department or Unit Head/Director writes a letter to the Dean, including: 1) a statement on professionalism; and 2) a summary of the candidate’s qualifications."
@@ -1030,6 +1057,9 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Associate research scientists/engineers may co-advise master’s theses or doctoral theses on a case-by-case basis. They can supervise postdoctoral fellows and serve as principal investigators on grants. Associate research scientists/engineers may teach, but teaching should not be a primary source of support for anyone on the research scientist/engineer track.",
+    "privilegeNotes": [
+      "Associate research scientists/engineers may teach, but teaching should not be a primary source of support for anyone on the research scientist/engineer track."
+    ],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required.",
       "The Department or Unit Head/Director writes a letter to the Dean, including: 1) a statement on professionalism; and 2) a summary of the candidate’s qualifications."
@@ -1055,6 +1085,9 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Assistant research scientists/engineers may co-advise master’s theses or doctoral theses on a case-by-case basis. They can supervise postdoctoral fellows and serve as principal investigators on grants. Assistant research scientists/engineers may teach, but teaching should not be a primary source of support for anyone on the research scientist/engineer track.",
+    "privilegeNotes": [
+      "Assistant research scientists/engineers may teach, but teaching should not be a primary source of support for anyone on the research scientist/engineer track."
+    ],
     "procedures": [
       "The dossier includes a department request and CV. No faculty vote is required.",
       "The Department or Unit Head/Director writes a letter to the Dean, including: 1) a statement on professionalism; and 2) a summary of the candidate’s qualifications."
@@ -1080,6 +1113,7 @@ export const outcomes = {
       "May serve as PI"
     ],
     "detail": "Homewood Professors may supervise master’s or doctoral theses and postdoctoral fellows. They can serve as principal investigators on grants.",
+    "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV. There is no standard template letter.",
       "The Department or Unit Head/Director solicits enough referees to obtain a minimum of three external evaluations. There is no standard template letter. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",

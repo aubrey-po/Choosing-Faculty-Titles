@@ -17,6 +17,13 @@ function criteriaSection(rank) {
 function sourceNote(rank) {
   return rank.sourceNote?`<div class="result-note"><span aria-hidden="true">i</span><p>${esc(rank.sourceNote)}</p></div>`:'';
 }
+function privilegeInformation(rank) {
+  return (rank.privilegeNotes||[]).map(text=>`<div class="result-note privilege-note" role="note"><span aria-hidden="true">i</span><p>${esc(text)}</p></div>`).join('');
+}
+function resultContent(rank) {
+  if(rank.contactOnly) return `<p class="next-step-contact"><a href="mailto:${esc(rank.email)}">${esc(rank.email)}</a></p>`;
+  return `<p class="result-lead">${esc(rank.recommendation || (rank.kind==='title'?'Based on your answers, this title seems like the best fit.':'Review the criteria and next steps for this appointment.'))}</p>${criteriaSection(rank)}${rank.permissions?'<h3 class="section-caption">Privileges at a glance</h3>':''}${permissionGrid(rank)}${privilegeInformation(rank)}${appointmentNextStep(rank)}`;
+}
 function procedureList(steps) {
   if(steps.length===1) return `<p class="procedure-single">${esc(steps[0])}</p>`;
   return steps.length?`<ol class="procedure-list">${steps.map(text=>`<li>${esc(text)}</li>`).join('')}</ol>`:'';
@@ -39,7 +46,7 @@ function render(focus=false) {
   if(isQuestion) {
     $('#decision-card').innerHTML=`<div class="card-topline"><span class="step-marker">${String(history.length+1).padStart(2,'0')}</span><span>${esc(current.section)}</span><span class="live-label"><span></span> Decision in progress</span></div><div class="question-body"><p class="eyebrow question-eyebrow">QUESTION ${String(history.length+1).padStart(2,'0')}</p><h2 id="step-title" tabindex="-1">${esc(current.title)}</h2>${current.context?`<p class="question-context">${esc(current.context)}</p>`:''}<fieldset class="answer-options ${current.options.length>2?'four-options':''}"><legend class="sr-only">Choose an answer to continue</legend>${current.options.map((o,i)=>`<button type="button" class="answer-card" data-choice="${i}"><span class="answer-symbol" aria-hidden="true">${current.options.length===2?(i===0?check:'<span>−</span>'):'<span>'+String.fromCharCode(65+i)+'</span>'}</span><span>${esc(o.label)}</span>${arrow}</button>`).join('')}</fieldset><p class="choice-hint">Choose the answer that best describes the proposed appointment.</p></div><div class="card-actions"><button class="back-button" ${history.length?'':'disabled'} data-back><span aria-hidden="true">←</span> Previous question</button><button class="reset-button" ${history.length?'':'disabled'} data-reset>Start over <span aria-hidden="true">↺</span></button></div>`;
   } else {
-    $('#decision-card').innerHTML=`<div class="card-topline"><span class="result-check">${check}</span><span>${current.kind==='title'?'Your recommendation':'Appointment guidance'}</span><span class="complete-label">Path complete</span></div><div class="result-body"><p class="eyebrow">${esc(current.group)}</p><h2 id="step-title" tabindex="-1">${esc(current.title)}</h2><p class="result-lead">${esc(current.recommendation || (current.kind==='title'?'Based on your answers, this title seems like the best fit.':'Review the criteria and next steps for this appointment.'))}</p>${criteriaSection(current)}${current.permissions?'<h3 class="section-caption">Privileges at a glance</h3>':''}${permissionGrid(current)}${current.permissions&&current.detail?`<p class="dialog-detail">${esc(current.detail)}</p>`:''}${appointmentNextStep(current)}<div class="result-tools"><button class="button primary" data-copy>Copy recommendation ${arrow}</button><button class="button secondary" data-print>Print / save PDF</button></div></div><div class="card-actions"><button class="back-button" data-back><span aria-hidden="true">←</span> Review previous answer</button><button class="reset-button" data-reset>Start a new decision <span aria-hidden="true">↺</span></button></div>`;
+    $('#decision-card').innerHTML=`<div class="card-topline"><span class="result-check">${check}</span><span>${current.kind==='title'?'Your recommendation':'Appointment guidance'}</span><span class="complete-label">Path complete</span></div><div class="result-body"><p class="eyebrow">${esc(current.group)}</p><h2 id="step-title" tabindex="-1">${esc(current.title)}</h2>${resultContent(current)}<div class="result-tools"><button class="button primary" data-copy>Copy recommendation ${arrow}</button><button class="button secondary" data-print>Print / save PDF</button></div></div><div class="card-actions"><button class="back-button" data-back><span aria-hidden="true">←</span> Review previous answer</button><button class="reset-button" data-reset>Start a new decision <span aria-hidden="true">↺</span></button></div>`;
   }
   $('#decision-card').querySelectorAll('[data-choice]').forEach(button=>button.addEventListener('click',()=>{history.push({id:current.id,choice:Number(button.dataset.choice)});render(true);}));
   $('#decision-card').querySelector('[data-back]')?.addEventListener('click',()=>{history.pop();render(true);});
@@ -55,8 +62,10 @@ function renderHistory() {
   $('#path-content').querySelectorAll('[data-edit]').forEach(button=>button.addEventListener('click',()=>{history=history.slice(0,Number(button.dataset.edit));render(true);$('#decision-card').scrollIntoView({behavior:'smooth',block:'nearest'});}));
 }
 function summaryText() {
+  if(current.contactOnly) return `Whiting School of Engineering\n\n${current.title}\n${current.email}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   const privileges=current.permissions?`\n\nPrivileges at a glance\n${current.permissions.map((value,i)=>`${permissionLabels[i]}: ${value}`).join('\n')}`:'';
-  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${current.detail}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.contactName} ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact Sheri Green: ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline uploaded November 12, 2026).`;
+  const extraInformation=current.permissions?(current.privilegeNotes||[]).join('\n'):current.detail;
+  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${extraInformation}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.contactName} ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact Sheri Green: ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline uploaded November 12, 2026).`;
 }
 async function copyRecommendation() {
   const content=summaryText();
@@ -76,7 +85,7 @@ function renderDirectory() {
 }
 function openRank(id) {
   const rank=outcomes[id];
-  $('#dialog-content').innerHTML=`<p class="directory-category">${esc(rank.group)}</p><h2 id="dialog-title">${esc(rank.title)}</h2>${criteriaSection(rank)}<h3 class="section-caption">Privileges at a glance</h3>${permissionGrid(rank)}<p class="dialog-detail">${esc(rank.detail)}</p>${appointmentNextStep(rank,true)}`;
+  $('#dialog-content').innerHTML=`<p class="directory-category">${esc(rank.group)}</p><h2 id="dialog-title">${esc(rank.title)}</h2>${criteriaSection(rank)}<h3 class="section-caption">Privileges at a glance</h3>${permissionGrid(rank)}${privilegeInformation(rank)}${appointmentNextStep(rank,true)}`;
   $('#title-dialog').showModal();
 }
 $('#close-dialog').addEventListener('click',()=>$('#title-dialog').close());
