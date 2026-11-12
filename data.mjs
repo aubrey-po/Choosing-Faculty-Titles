@@ -921,7 +921,7 @@ export const outcomes = {
     "alternativePathway": {
       "heading": "Incoming or outgoing tenure-track faculty",
       "criteria": [
-        "The candidate is an incoming or outgoing tenure-track faculty member at the Professor rank."
+        "If the candidate is an incoming or outgoing tenure-track faculty member at the Professor rank:"
       ],
       "procedures": [
         "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
@@ -968,7 +968,7 @@ export const outcomes = {
     "alternativePathway": {
       "heading": "Incoming or outgoing tenure-track faculty",
       "criteria": [
-        "The candidate is an incoming or outgoing tenure-track faculty member at the Associate Professor rank."
+        "If the candidate is an incoming or outgoing tenure-track faculty member at the Associate Professor rank:"
       ],
       "procedures": [
         "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
@@ -1007,7 +1007,7 @@ export const outcomes = {
     "alternativePathway": {
       "heading": "Incoming or outgoing tenure-track faculty",
       "criteria": [
-        "The candidate is an incoming or outgoing tenure-track faculty member at the Assistant Professor rank."
+        "If the candidate is an incoming or outgoing tenure-track faculty member at the Assistant Professor rank:"
       ],
       "procedures": [
         "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
