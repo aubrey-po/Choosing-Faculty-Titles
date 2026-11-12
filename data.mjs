@@ -454,7 +454,7 @@ export const outcomes = {
     "contactName": "Kirstin Brooks-Robinson",
     "email": "wseacademicappta@jhu.edu",
     "directory": false,
-    "recommendation": "The revised decision tree identifies this as the correct title for this appointment."
+    "recommendation": "This is the correct title for this appointment."
   },
   "3": {
     "id": 3,
@@ -479,7 +479,7 @@ export const outcomes = {
     "contactName": "Kirstin Brooks-Robinson",
     "email": "wseacademicappta@jhu.edu",
     "directory": false,
-    "recommendation": "The revised decision tree identifies this as the correct title for this appointment."
+    "recommendation": "This is the correct title for this appointment."
   },
   "4": {
     "id": 4,
@@ -504,7 +504,7 @@ export const outcomes = {
     "contactName": "Kirstin Brooks-Robinson",
     "email": "wseacademicappta@jhu.edu",
     "directory": false,
-    "recommendation": "The revised decision tree identifies this as the correct title for this appointment."
+    "recommendation": "This is the correct title for this appointment."
   },
   "8": {
     "id": 8,
