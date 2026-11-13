@@ -1,4 +1,4 @@
-import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs';
+import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=695f24c';
 
 const $ = s => document.querySelector(s);
 const esc = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
