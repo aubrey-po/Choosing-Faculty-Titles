@@ -534,7 +534,7 @@ export const outcomes = {
     "group": "Internal JHU courtesy appointment",
     "kind": "guidance",
     "criteria": [
-      "This is a visiting or courtesy appointment for someone with a primary JHU appointment outside APL or HLTCOE."
+      "This is a visiting or courtesy appointment for someone with a primary JHU appointment (outside APL or HLTCOE)."
     ],
     "detail": "The courtesy appointment title should be the same as their primary appointment title.",
     "procedures": [
