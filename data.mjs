@@ -1,4 +1,4 @@
-// Generated from the revised Word outline uploaded November 12, 2026.
+// Generated from the revised Word outline updated November 16, 2026.
 export const EMAIL = 'wseacademicappta@jhu.edu';
 export const CONTACT_NAME = 'Kirstin Brooks-Robinson';
 export const APPOINTMENT_NEXT_STEP = 'Start an appointment request in SmartPath.';
@@ -78,6 +78,23 @@ export const questions = {
         "next": 9
       }
     ]
+  },
+  "8": {
+    "id": 8,
+    "section": "Internal JHU courtesy appointment",
+    "title": "Will the secondary title be the same as the primary title in APL or HLTCOE?",
+    "short": "Secondary title matches the APL or HLTCOE primary title",
+    "options": [
+      {
+        "label": "Yes",
+        "next": 9
+      },
+      {
+        "label": "No",
+        "next": 55
+      }
+    ],
+    "context": "The department can request a research professor track appointment, or an appointment with the same title as their primary title."
   },
   "10": {
     "id": 10,
@@ -509,43 +526,23 @@ export const outcomes = {
     "directory": false,
     "recommendation": "This is the correct title for this appointment."
   },
-  "8": {
-    "id": 8,
-    "title": "Research professor track or matching primary title",
-    "group": "Internal JHU courtesy appointment",
-    "kind": "guidance",
-    "criteria": [
-      "This is a visiting or courtesy appointment for someone with a primary JHU appointment in APL or HLTCOE."
-    ],
-    "detail": "The department can request an appointment on the research professor track or with the same title as the primary appointment.",
-    "procedures": [
-      "Dossier requirements are not specified in the revised document. Confirm the required materials with Faculty Affairs.",
-      "No faculty vote is required."
-    ],
-    "resources": [],
-    "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
-    "email": "wseacademicappta@jhu.edu",
-    "sourceNote": "The source leaves the dossier contents as “*”."
-  },
   "9": {
     "id": 9,
-    "title": "Courtesy appointment matching the primary title",
+    "title": "Notify Faculty Affairs of the matching title",
     "group": "Internal JHU courtesy appointment",
     "kind": "guidance",
+    "guidanceOnly": true,
     "criteria": [
-      "This is a visiting or courtesy appointment for someone with a primary JHU appointment (outside APL or HLTCOE)."
+      "This is a visiting or courtesy appointment for someone with a primary JHU appointment. The secondary title is the same as the primary appointment title."
     ],
-    "detail": "The courtesy appointment title should be the same as their primary appointment title.",
-    "procedures": [
-      "Dossier requirements are not specified in the revised document. Confirm the required materials with Faculty Affairs.",
-      "No faculty vote is required."
-    ],
+    "detail": "If the secondary appointment title is the same as their primary appointment title: Notify the Office of Faculty Affairs by sending an email to Kirstin Brooks-Robinson at wseacademicappta@jhu.edu",
+    "procedures": [],
     "resources": [],
-    "nextStep": "Start an appointment request in SmartPath.",
+    "nextStep": "Notify the Office of Faculty Affairs by emailing Kirstin Brooks-Robinson.",
+    "actionLabel": "Email Kirstin Brooks-Robinson",
+    "actionUrl": "mailto:wseacademicappta@jhu.edu",
     "contactName": "Kirstin Brooks-Robinson",
-    "email": "wseacademicappta@jhu.edu",
-    "sourceNote": "The source leaves the dossier contents as “*”."
+    "email": "wseacademicappta@jhu.edu"
   },
   "11": {
     "id": 11,
@@ -1138,6 +1135,24 @@ export const outcomes = {
     "procedures": [],
     "resources": [],
     "nextStep": "Discuss the proposed appointment with the Office of Faculty Affairs.",
+    "contactName": "Office of Faculty Affairs",
+    "email": "wseacademicappta@jhu.edu"
+  },
+  "55": {
+    "id": 55,
+    "title": "Review the secondary appointment title",
+    "group": "Internal JHU courtesy appointment",
+    "kind": "guidance",
+    "guidanceOnly": true,
+    "criteria": [
+      "This is a visiting or courtesy appointment for someone with a primary JHU appointment in APL or HLTCOE. The secondary title differs from the primary appointment title."
+    ],
+    "detail": "If the secondary appointment title is different from the primary appointment title: Review the criteria, dossier requirements, and submission procedures for the secondary appointment title in the “Title directory” tab.",
+    "procedures": [],
+    "resources": [],
+    "nextStep": "Review the secondary title’s criteria, dossier requirements, and submission procedures in the Title directory.",
+    "actionLabel": "Open Title directory",
+    "actionUrl": "#directory",
     "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu"
   }

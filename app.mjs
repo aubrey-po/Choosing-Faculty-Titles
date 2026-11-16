@@ -1,14 +1,14 @@
-import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=695f24c';
+import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=20261116';
 
 const $ = s => document.querySelector(s);
 const esc = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
 const check = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>';
 let history = [];
-try { history = JSON.parse(sessionStorage.getItem('wse-title-path-20261112') || '[]'); resolvePath(history); } catch { history = []; }
+try { history = JSON.parse(sessionStorage.getItem('wse-title-path-20261116') || '[]'); resolvePath(history); } catch { history = []; }
 let current = resolvePath(history);
 let toastTimer;
-function save() { try {sessionStorage.setItem('wse-title-path-20261112', JSON.stringify(history));} catch {} }
+function save() { try {sessionStorage.setItem('wse-title-path-20261116', JSON.stringify(history));} catch {} }
 function focusHeading() { requestAnimationFrame(() => $('#step-title')?.focus({preventScroll:true})); }
 function notify(message) { $('#toast').textContent=message; $('#toast').classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3500); }
 function criteriaSection(rank) {
@@ -22,6 +22,7 @@ function privilegeInformation(rank) {
 }
 function resultContent(rank) {
   if(rank.contactOnly) return `<p class="next-step-contact"><a href="mailto:${esc(rank.email)}">${esc(rank.email)}</a></p>`;
+  if(rank.guidanceOnly) return `<p class="result-lead">${esc(rank.detail)}</p><p class="guidance-action"><a class="button primary" href="${esc(rank.actionUrl)}">${esc(rank.actionLabel)} ${arrow}</a></p>`;
   return `<p class="result-lead">${esc(rank.recommendation || (rank.kind==='title'?'Based on your answers, this title seems like the best fit.':'Review the criteria and next steps for this appointment.'))}</p>${criteriaSection(rank)}${rank.permissions?'<h3 class="section-caption">Privileges at a glance</h3>':''}${permissionGrid(rank)}${privilegeInformation(rank)}${appointmentNextStep(rank)}`;
 }
 function procedureList(steps) {
@@ -62,10 +63,11 @@ function renderHistory() {
   $('#path-content').querySelectorAll('[data-edit]').forEach(button=>button.addEventListener('click',()=>{history=history.slice(0,Number(button.dataset.edit));render(true);$('#decision-card').scrollIntoView({behavior:'smooth',block:'nearest'});}));
 }
 function summaryText() {
+  if(current.guidanceOnly) return `Whiting School of Engineering\n\n${current.title}\n${current.detail}\n${current.actionLabel}: ${current.actionUrl}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   if(current.contactOnly) return `Whiting School of Engineering\n\n${current.title}\n${current.email}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   const privileges=current.permissions?`\n\nPrivileges at a glance\n${current.permissions.map((value,i)=>`${permissionLabels[i]}: ${value}`).join('\n')}`:'';
   const extraInformation=current.permissions?(current.privilegeNotes||[]).join('\n'):current.detail;
-  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${extraInformation}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.contactName} ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact Sheri Green: ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline uploaded November 12, 2026).`;
+  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${extraInformation}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.contactName} ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact Sheri Green: ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline updated November 16, 2026).`;
 }
 async function copyRecommendation() {
   const content=summaryText();
