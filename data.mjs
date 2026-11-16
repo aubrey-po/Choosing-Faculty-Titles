@@ -528,8 +528,8 @@ export const outcomes = {
   },
   "9": {
     "id": 9,
-    "title": "Notify Faculty Affairs of the matching title",
-    "group": "Internal JHU courtesy appointment",
+    "title": "Notify Faculty Affairs of the secondary appointment",
+    "group": "JHU secondary appointment",
     "kind": "guidance",
     "guidanceOnly": true,
     "criteria": [
@@ -539,7 +539,7 @@ export const outcomes = {
     "procedures": [],
     "resources": [],
     "nextStep": "Notify the Office of Faculty Affairs by emailing Kirstin Brooks-Robinson.",
-    "actionLabel": "Email Kirstin Brooks-Robinson",
+    "actionLabel": "email wseacademicappta@jhu.edu",
     "actionUrl": "mailto:wseacademicappta@jhu.edu",
     "contactName": "Kirstin Brooks-Robinson",
     "email": "wseacademicappta@jhu.edu"
