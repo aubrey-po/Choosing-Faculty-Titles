@@ -1,4 +1,4 @@
-import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=20261117';
+import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=20261117-contact';
 
 const $ = s => document.querySelector(s);
 const esc = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -25,6 +25,7 @@ function guidanceActions(rank) {
 }
 function resultContent(rank) {
   if(rank.contactOnly) return `<p class="next-step-contact"><a href="mailto:${esc(rank.email)}">${esc(rank.email)}</a></p>`;
+  if(rank.contactSummaryOnly) return `<section class="appointment-next-step" aria-label="Faculty Affairs contact"><p>Direct questions to:<br><a href="mailto:${esc(rank.email)}">${esc(rank.email)}</a></p><a class="full-procedures-link" href="${PROCEDURES_URL}" target="_blank" rel="noopener noreferrer">View full policies and procedures <span aria-hidden="true">↗</span></a></section>`;
   if(rank.guidanceOnly) return `${(rank.guidanceParagraphs||[rank.detail]).map(text=>`<p class="result-lead">${esc(text)}</p>`).join('')}<div class="result-tools guidance-action">${guidanceActions(rank).map(action=>`<a class="button primary" href="${esc(action.url)}">${esc(action.label)} ${arrow}</a>`).join('')}</div>`;
   return `<p class="result-lead">${esc(rank.recommendation || (rank.kind==='title'?'Based on your answers, this title seems like the best fit.':'Review the criteria and next steps for this appointment.'))}</p>${criteriaSection(rank)}${rank.permissions?'<h3 class="section-caption">Privileges at a glance</h3>':''}${permissionGrid(rank)}${privilegeInformation(rank)}${appointmentNextStep(rank)}`;
 }
@@ -66,6 +67,7 @@ function renderHistory() {
   $('#path-content').querySelectorAll('[data-edit]').forEach(button=>button.addEventListener('click',()=>{history=history.slice(0,Number(button.dataset.edit));render(true);$('#decision-card').scrollIntoView({behavior:'smooth',block:'nearest'});}));
 }
 function summaryText() {
+  if(current.contactSummaryOnly) return `Whiting School of Engineering\n\n${current.title}\n\nDirect questions to:\n${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   if(current.guidanceOnly) return `Whiting School of Engineering\n\n${current.title}\n${current.detail}\n${guidanceActions(current).map(action=>action.label+': '+new URL(action.url,location.href).href).join('\n')}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   if(current.contactOnly) return `Whiting School of Engineering\n\n${current.title}\n${current.email}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   const privileges=current.permissions?`\n\nPrivileges at a glance\n${current.permissions.map((value,i)=>`${permissionLabels[i]}: ${value}`).join('\n')}`:'';

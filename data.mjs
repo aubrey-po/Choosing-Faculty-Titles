@@ -307,7 +307,7 @@ export const questions = {
         "short": "Externally recognized research program with impact"
       },
       {
-        "label": "Has the candidate demonstrated strong research potential as they begin to establish an independent research program",
+        "label": "The candidate has demonstrated strong research potential as they begin to establish an independent research program",
         "next": 38,
         "short": "Strong research potential and an emerging independent program"
       },
@@ -1062,6 +1062,7 @@ export const outcomes = {
     "title": "Connect with Faculty Affairs",
     "group": "Appointment review",
     "kind": "contact",
+    "contactSummaryOnly": true,
     "criteria": [
       "The answers along this decision path do not establish an appropriate faculty title. Review the selected criteria with the Office of Faculty Affairs."
     ],
