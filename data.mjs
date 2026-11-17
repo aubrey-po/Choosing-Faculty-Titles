@@ -851,11 +851,9 @@ export const outcomes = {
     "directory": true,
     "alternativePathway": {
       "heading": "Temporary incoming or outgoing tenure-track appointments",
-      "criteria": [
-        "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Professor rank."
-      ],
+      "criteria": [],
       "procedures": [
-        "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
+        "If this is a temporary appointment for an incoming or outgoing tenure track faculty member: The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
       ]
     }
   },
@@ -898,11 +896,9 @@ export const outcomes = {
     "directory": true,
     "alternativePathway": {
       "heading": "Temporary incoming or outgoing tenure-track appointments",
-      "criteria": [
-        "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Associate Professor rank."
-      ],
+      "criteria": [],
       "procedures": [
-        "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
+        "If this is a temporary appointment for an incoming or outgoing tenure track faculty member: The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
       ]
     }
   },
@@ -937,11 +933,9 @@ export const outcomes = {
     "directory": true,
     "alternativePathway": {
       "heading": "Temporary incoming or outgoing tenure-track appointments",
-      "criteria": [
-        "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Assistant Professor rank."
-      ],
+      "criteria": [],
       "procedures": [
-        "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
+        "If this is a temporary appointment for an incoming or outgoing tenure track faculty member: The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
       ]
     }
   },
