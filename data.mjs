@@ -1,6 +1,6 @@
-// Generated from the revised Word outline updated November 16, 2026.
+// Generated from the revised Word outline updated November 17, 2026.
 export const EMAIL = 'wseacademicappta@jhu.edu';
-export const CONTACT_NAME = 'Kirstin Brooks-Robinson';
+export const CONTACT_NAME = 'Office of Faculty Affairs';
 export const APPOINTMENT_NEXT_STEP = 'Start an appointment request in SmartPath.';
 export const SMARTPATH_URL = 'https://engineering-jhu.mntnpass.com/mps';
 export const PROCEDURES_URL = 'https://engineering.jhu.edu/aptc/policies-and-procedures/';
@@ -9,8 +9,8 @@ export const questions = {
   "1": {
     "id": 1,
     "section": "Incoming or outgoing faculty",
-    "title": "Are they an incoming or outgoing tenure track faculty member?",
-    "short": "Incoming/outgoing tenure-track faculty",
+    "title": "Is this a temporary appointment for an incoming or outgoing tenure track faculty member?",
+    "short": "Temporary incoming/outgoing tenure-track appointment",
     "options": [
       {
         "label": "Yes — Professor",
@@ -29,7 +29,7 @@ export const questions = {
         "next": 5
       }
     ],
-    "context": "For an incoming or outgoing tenure-track faculty member, choose the rank of their tenure-track appointment."
+    "context": "For a temporary appointment for an incoming or outgoing tenure-track faculty member, choose the rank of their tenure-track appointment."
   },
   "5": {
     "id": 5,
@@ -43,7 +43,7 @@ export const questions = {
       },
       {
         "label": "No",
-        "next": 19
+        "next": 20
       }
     ]
   },
@@ -65,7 +65,7 @@ export const questions = {
   },
   "7": {
     "id": 7,
-    "section": "Internal JHU courtesy appointment",
+    "section": "JHU secondary appointment",
     "title": "Is their current primary appointment in APL or HLTCOE?",
     "short": "Primary appointment in APL or HLTCOE",
     "options": [
@@ -79,117 +79,118 @@ export const questions = {
       }
     ]
   },
-  "8": {
-    "id": 8,
-    "section": "Internal JHU courtesy appointment",
-    "title": "Will the secondary title be the same as the primary title in APL or HLTCOE?",
-    "short": "Secondary title matches the APL or HLTCOE primary title",
+  "10": {
+    "id": 10,
+    "section": "Visiting appointment",
+    "title": "Will this be a visiting appointment?",
+    "short": "Visiting appointment",
     "options": [
       {
         "label": "Yes",
-        "next": 9
+        "next": 11
       },
       {
         "label": "No",
-        "next": 55
+        "next": 19
       }
-    ],
-    "context": "The department can request a research professor track appointment, or an appointment with the same title as their primary title."
+    ]
   },
-  "10": {
-    "id": 10,
+  "11": {
+    "id": 11,
     "section": "Visiting appointment",
     "title": "Do they hold the title Professor, Associate Professor, or Assistant Professor (or the equivalent international rank) at another institution?",
     "short": "Professorial title at home institution",
     "options": [
       {
         "label": "Professor",
-        "next": 11
-      },
-      {
-        "label": "Associate Professor",
         "next": 12
       },
       {
-        "label": "Assistant Professor",
+        "label": "Associate Professor",
         "next": 13
       },
       {
-        "label": "None of these titles",
+        "label": "Assistant Professor",
         "next": 14
+      },
+      {
+        "label": "None of these titles",
+        "next": 15
       }
     ],
     "context": "Include a formally equivalent international rank."
   },
-  "14": {
-    "id": 14,
+  "15": {
+    "id": 15,
     "section": "Visiting appointment",
     "title": "Will the role in WSE be a student or a postdoc?",
     "short": "WSE role is a student or postdoc",
     "options": [
       {
         "label": "Yes",
-        "next": 15
+        "next": 16
       },
       {
         "label": "No",
-        "next": 16
+        "next": 17
       }
     ]
   },
-  "16": {
-    "id": 16,
+  "17": {
+    "id": 17,
     "section": "Visiting appointment",
     "title": "Do they have an engineering degree and a primary appointment elsewhere?",
     "short": "Engineering degree and primary appointment elsewhere",
     "options": [
       {
         "label": "Yes",
-        "next": 17
-      },
-      {
-        "label": "No",
         "next": 18
-      }
-    ]
-  },
-  "19": {
-    "id": 19,
-    "section": "Professor of the Practice",
-    "title": "Do they have a strong and positive external reputation and leadership experience in their current/prior professional careers in non-academic settings that have given them regional, national, or international stature?",
-    "short": "External reputation and non-academic leadership",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 20
       },
       {
         "label": "No",
-        "next": 21
+        "next": 45
       }
     ]
   },
-  "21": {
-    "id": 21,
-    "section": "Teaching appointment",
-    "title": "Will at least 50% of their JHU compensation be for teaching activities?",
-    "short": "At least 50% of JHU compensation for teaching",
+  "20": {
+    "id": 20,
+    "section": "Appointment profile",
+    "title": "Choose the best fit below:",
+    "short": "Primary appointment activities or qualifications",
     "options": [
       {
-        "label": "Yes",
-        "next": 22
+        "label": "The faculty member will be largely engaged in educational activities, i.e., at least 50% of their JHU compensation will be for teaching activities",
+        "next": 22,
+        "short": "Teaching activities (at least 50% of compensation)"
       },
       {
-        "label": "No",
-        "next": 36
+        "label": "The faculty member will be largely engaged in research activities, i.e., at least 50% of their JHU compensation will be for research activities",
+        "next": 33,
+        "short": "Research activities (at least 50% of compensation)"
+      },
+      {
+        "label": "The faculty member has a strong external reputation and leadership experience in their current/prior professional careers in non-academic settings",
+        "next": 21,
+        "short": "Non-academic reputation and leadership"
+      },
+      {
+        "label": "They are of the caliber of members of the National Academy of Sciences or National Academy of Engineering",
+        "next": 44,
+        "short": "National Academy caliber"
+      },
+      {
+        "label": "None of these",
+        "next": 45,
+        "short": "None of these"
       }
-    ]
+    ],
+    "optionLayout": "criteria"
   },
   "22": {
     "id": 22,
     "section": "Teaching appointment",
-    "title": "Will the FTE be 75% or higher?",
-    "short": "FTE of 75% or higher",
+    "title": "Will they be compensated at 75% or more of their FTE?",
+    "short": "Compensation at 75% or more of FTE",
     "options": [
       {
         "label": "Yes",
@@ -197,7 +198,7 @@ export const questions = {
       },
       {
         "label": "No",
-        "next": 32
+        "next": 30
       }
     ],
     "context": "FTE means full-time equivalent."
@@ -205,8 +206,8 @@ export const questions = {
   "23": {
     "id": 23,
     "section": "Teaching appointment",
-    "title": "Will their appointment be one year or longer?",
-    "short": "Appointment of at least one year",
+    "title": "Is this a multi-year appointment?",
+    "short": "Multi-year appointment",
     "options": [
       {
         "label": "Yes",
@@ -214,81 +215,70 @@ export const questions = {
       },
       {
         "label": "No",
-        "next": 32
+        "next": 30
       }
     ]
   },
   "25": {
     "id": 25,
     "section": "Teaching Professor track",
-    "title": "Do they have at least 10 years of excellent independent teaching experience and impact outside of their home institution?",
-    "short": "10+ years and impact outside home institution",
+    "title": "Choose the best fit:",
+    "short": "Teaching experience and impact",
     "options": [
       {
-        "label": "Yes",
-        "next": 26
+        "label": "The faculty member has at least 10 years of excellent independent teaching experience and impact outside of their home institution",
+        "next": 26,
+        "short": "10+ years and impact outside home institution"
       },
       {
-        "label": "No",
-        "next": 27
+        "label": "The faculty member has at least 5 years of excellent independent teaching experience and impact in the home institution or beyond",
+        "next": 27,
+        "short": "5+ years and impact within or beyond home institution"
+      },
+      {
+        "label": "The faculty member has some teaching experience or the equivalent",
+        "next": 28,
+        "short": "Some teaching experience or equivalent"
+      },
+      {
+        "label": "None of these",
+        "next": 45,
+        "short": "None of these"
       }
     ],
+    "optionLayout": "criteria",
     "context": "The Teaching Professor track seems like the best fit."
   },
-  "27": {
-    "id": 27,
-    "section": "Teaching Professor track",
-    "title": "Do they have at least 5 years of excellent independent teaching experience and impact in the home institution or beyond?",
-    "short": "5+ years and impact within or beyond home institution",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 28
-      },
-      {
-        "label": "No",
-        "next": 29
-      }
-    ]
-  },
-  "29": {
-    "id": 29,
-    "section": "Teaching Professor track",
-    "title": "Do they have some teaching experience or the equivalent?",
-    "short": "Some teaching experience or equivalent",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 30
-      },
-      {
-        "label": "No",
-        "next": 54
-      }
-    ]
-  },
-  "32": {
-    "id": 32,
+  "30": {
+    "id": 30,
     "section": "Lecturer track",
-    "title": "Have they taught with excellence for a period of not less than three years, or held a position at another institution with relative responsibility and seniority?",
-    "short": "3+ years of excellent teaching or comparable seniority",
+    "title": "Choose the best fit:",
+    "short": "Teaching qualifications and experience",
     "options": [
       {
-        "label": "Yes",
-        "next": 33
+        "label": "The faculty member has taught with excellence for a period of not less than three years, or held a position at another institution with relative responsibility and seniority",
+        "next": 31,
+        "short": "3+ years of excellent teaching or comparable seniority"
       },
       {
-        "label": "No",
-        "next": 34
+        "label": "The faculty member is qualified in the relevant field and will be able to demonstrate experience in effective teaching in that field",
+        "next": 32,
+        "short": "Field qualifications and effective teaching experience"
+      },
+      {
+        "label": "None of these",
+        "next": 45,
+        "short": "None of these"
       }
     ],
+    "optionLayout": "criteria",
     "context": "The Lecturer track seems like the best fit."
   },
-  "34": {
-    "id": 34,
-    "section": "Lecturer track",
-    "title": "Are they qualified in the relevant field and will be able to demonstrate experience in effective teaching in that field?",
-    "short": "Field qualifications and effective teaching experience",
+  "33": {
+    "id": 33,
+    "section": "Research appointment",
+    "title": "Are they expected to have an independent research program in which they are named investigator now or in the near future?",
+    "short": "Independent research program as a named investigator",
     "options": [
       {
         "label": "Yes",
@@ -296,165 +286,79 @@ export const questions = {
       },
       {
         "label": "No",
-        "next": 54
-      }
-    ]
-  },
-  "36": {
-    "id": 36,
-    "section": "Research appointment",
-    "title": "Will at least 50% of their JHU compensation be for research activities?",
-    "short": "At least 50% of JHU compensation for research",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 37
-      },
-      {
-        "label": "No",
-        "next": 52
-      }
-    ]
-  },
-  "37": {
-    "id": 37,
-    "section": "Research appointment",
-    "title": "Are they expected to have an independent research program in which they are named investigator now or in the near future?",
-    "short": "Independent research program as a named investigator",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 39
-      },
-      {
-        "label": "No",
-        "next": 46
-      }
-    ]
-  },
-  "39": {
-    "id": 39,
-    "section": "Research Professor track",
-    "title": "Have they demonstrated leadership and significant impact in their field and/or hold a strong professional reputation beyond the university?",
-    "short": "Leadership, field impact or reputation beyond the university",
-    "options": [
-      {
-        "label": "Yes",
         "next": 40
+      }
+    ]
+  },
+  "35": {
+    "id": 35,
+    "section": "Research Professor track",
+    "title": "Choose the best fit:",
+    "short": "Research impact and independence",
+    "options": [
+      {
+        "label": "The candidate has demonstrated leadership and significant impact in their field and/or holds a strong professional reputation beyond the university",
+        "next": 36,
+        "short": "Leadership, field impact or reputation beyond the university"
       },
       {
-        "label": "No",
-        "next": 41
+        "label": "The candidate has built an externally recognized research program with a demonstrable impact in their field",
+        "next": 37,
+        "short": "Externally recognized research program with impact"
+      },
+      {
+        "label": "Has the candidate demonstrated strong research potential as they begin to establish an independent research program",
+        "next": 38,
+        "short": "Strong research potential and an emerging independent program"
+      },
+      {
+        "label": "None of these",
+        "next": 45,
+        "short": "None of these"
       }
     ],
+    "optionLayout": "criteria",
     "context": "The Research Professor track seems like the best fit."
   },
-  "41": {
-    "id": 41,
-    "section": "Research Professor track",
-    "title": "Have they built an externally recognized research program with a demonstrable impact in their field?",
-    "short": "Externally recognized research program with impact",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 42
-      },
-      {
-        "label": "No",
-        "next": 43
-      }
-    ]
-  },
-  "43": {
-    "id": 43,
-    "section": "Research Professor track",
-    "title": "Do they demonstrate strong research potential as they begin to establish an independent research program?",
-    "short": "Strong potential for independent research",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 44
-      },
-      {
-        "label": "No",
-        "next": 54
-      }
-    ]
-  },
-  "46": {
-    "id": 46,
+  "40": {
+    "id": 40,
     "section": "Research Scientist/Engineer track",
-    "title": "Do they have a high level of experience, responsibility, and proficiency in the discharge of duties, independence in the conduct of work, ability to manage a substantial portion of a research project, and ability to supervise the work of less senior members of the research team?",
-    "short": "High experience, independence and research team leadership",
+    "title": "Choose the best fit:",
+    "short": "Research experience and responsibility",
     "options": [
       {
-        "label": "Yes",
-        "next": 47
+        "label": "The candidate has a high level of experience, responsibility, and proficiency in the discharge of duties, independence in the conduct of work, ability to manage a substantial portion of a research project, and ability to supervise the work of less senior members of the research team",
+        "next": 41,
+        "short": "High experience, independence and research team leadership"
       },
       {
-        "label": "No",
-        "next": 48
+        "label": "The candidate has an intermediate level of experience, responsibility, and proficiency in the discharge of duties, independence in the conduct of work, ability to contribute to a substantial portion of a research project, and ability to supervise the work of less senior members of the research team",
+        "next": 42,
+        "short": "Intermediate experience, independence and team supervision"
+      },
+      {
+        "label": "The candidate has entry-level skills concomitant with the needs of the research team they will work with",
+        "next": 43,
+        "short": "Entry-level skills meeting the research team’s needs"
+      },
+      {
+        "label": "None of these",
+        "next": 45,
+        "short": "None of these"
       }
     ],
+    "optionLayout": "criteria",
     "context": "The Research Scientist/Engineer track seems like the best fit."
-  },
-  "48": {
-    "id": 48,
-    "section": "Research Scientist/Engineer track",
-    "title": "Do they have an intermediate level of experience, responsibility, and proficiency in the discharge of duties, independence in the conduct of work, ability to contribute to a substantial portion of a research project, and ability to supervise the work of less senior members of the research team?",
-    "short": "Intermediate experience, independence and team supervision",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 49
-      },
-      {
-        "label": "No",
-        "next": 50
-      }
-    ]
-  },
-  "50": {
-    "id": 50,
-    "section": "Research Scientist/Engineer track",
-    "title": "Do they have entry-level skills concomitant with the needs of the research team they will work with?",
-    "short": "Entry-level skills meeting the research team’s needs",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 51
-      },
-      {
-        "label": "No",
-        "next": 54
-      }
-    ]
-  },
-  "52": {
-    "id": 52,
-    "section": "Distinguished appointment",
-    "title": "Are they of the caliber of members of the National Academy of Sciences or National Academy of Engineering?",
-    "short": "National Academy caliber",
-    "options": [
-      {
-        "label": "Yes",
-        "next": 53
-      },
-      {
-        "label": "No",
-        "next": 54
-      }
-    ]
   }
 };
 export const outcomes = {
   "2": {
     "id": 2,
     "title": "Research Professor",
-    "group": "Incoming/outgoing tenure-track appointment",
+    "group": "Temporary incoming/outgoing tenure-track appointment",
     "kind": "title",
     "criteria": [
-      "The candidate is an incoming or outgoing tenure-track faculty member at the Professor rank."
+      "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Professor rank."
     ],
     "permissions": [
       "May supervise",
@@ -469,7 +373,7 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": false,
     "recommendation": "This is the correct title for this appointment."
@@ -477,10 +381,10 @@ export const outcomes = {
   "3": {
     "id": 3,
     "title": "Associate Research Professor",
-    "group": "Incoming/outgoing tenure-track appointment",
+    "group": "Temporary incoming/outgoing tenure-track appointment",
     "kind": "title",
     "criteria": [
-      "The candidate is an incoming or outgoing tenure-track faculty member at the Associate Professor rank."
+      "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Associate Professor rank."
     ],
     "permissions": [
       "May supervise",
@@ -495,7 +399,7 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": false,
     "recommendation": "This is the correct title for this appointment."
@@ -503,10 +407,10 @@ export const outcomes = {
   "4": {
     "id": 4,
     "title": "Assistant Research Professor",
-    "group": "Incoming/outgoing tenure-track appointment",
+    "group": "Temporary incoming/outgoing tenure-track appointment",
     "kind": "title",
     "criteria": [
-      "The candidate is an incoming or outgoing tenure-track faculty member at the Assistant Professor rank."
+      "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Assistant Professor rank."
     ],
     "permissions": [
       "May supervise",
@@ -521,10 +425,40 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": false,
     "recommendation": "This is the correct title for this appointment."
+  },
+  "8": {
+    "id": 8,
+    "title": "JHU secondary appointment for APL or HLTCOE scientists",
+    "group": "JHU secondary appointment",
+    "kind": "guidance",
+    "guidanceOnly": true,
+    "criteria": [
+      "The candidate has a primary JHU appointment in APL or HLTCOE."
+    ],
+    "detail": "APL and HLTCOE scientists are eligible for secondary appointments on the research professor track. If the department/institute wishes to grant a secondary appointment on the Research Professor track: Review the criteria, dossier requirements, and submission procedures for the appropriate title in the “Title directory” tab. If the secondary appointment title is the same as the primary appointment title: The department/institute manages secondary appointments directly but must notify the Office of Faculty Affairs of the secondary appointment by sending an email to wseacademicappta@jhu.edu",
+    "guidanceParagraphs": [
+      "APL and HLTCOE scientists are eligible for secondary appointments on the research professor track. If the department/institute wishes to grant a secondary appointment on the Research Professor track: Review the criteria, dossier requirements, and submission procedures for the appropriate title in the “Title directory” tab.",
+      "If the secondary appointment title is the same as the primary appointment title: The department/institute manages secondary appointments directly but must notify the Office of Faculty Affairs of the secondary appointment by sending an email to wseacademicappta@jhu.edu"
+    ],
+    "procedures": [],
+    "resources": [],
+    "nextStep": "Review the appropriate research professor title in the Title directory, or notify Faculty Affairs of a secondary appointment matching the primary title.",
+    "actions": [
+      {
+        "label": "Open Title directory",
+        "url": "#directory"
+      },
+      {
+        "label": "email wseacademicappta@jhu.edu",
+        "url": "mailto:wseacademicappta@jhu.edu"
+      }
+    ],
+    "contactName": "Office of Faculty Affairs",
+    "email": "wseacademicappta@jhu.edu"
   },
   "9": {
     "id": 9,
@@ -533,19 +467,19 @@ export const outcomes = {
     "kind": "guidance",
     "guidanceOnly": true,
     "criteria": [
-      "This is a visiting or courtesy appointment for someone with a primary JHU appointment. The secondary title is the same as the primary appointment title."
+      "The candidate has a primary JHU appointment outside APL or HLTCOE. The secondary appointment title must match the primary title."
     ],
-    "detail": "If the secondary appointment title is the same as their primary appointment title: Notify the Office of Faculty Affairs by sending an email to Kirstin Brooks-Robinson at wseacademicappta@jhu.edu",
+    "detail": "The secondary appointment title must be the same as the primary appointment title: The department/institute manages secondary appointments directly but must notify the Office of Faculty Affairs of the secondary appointment by sending an email to wseacademicappta@jhu.edu",
     "procedures": [],
     "resources": [],
-    "nextStep": "Notify the Office of Faculty Affairs by emailing Kirstin Brooks-Robinson.",
+    "nextStep": "The department/institute manages the secondary appointment directly and must notify Faculty Affairs by email.",
     "actionLabel": "email wseacademicappta@jhu.edu",
     "actionUrl": "mailto:wseacademicappta@jhu.edu",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu"
   },
-  "11": {
-    "id": 11,
+  "12": {
+    "id": 12,
     "title": "Visiting Professor",
     "group": "Visiting appointment",
     "kind": "title",
@@ -567,12 +501,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "12": {
-    "id": 12,
+  "13": {
+    "id": 13,
     "title": "Visiting Associate Professor",
     "group": "Visiting appointment",
     "kind": "title",
@@ -594,12 +528,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "13": {
-    "id": 13,
+  "14": {
+    "id": 14,
     "title": "Visiting Assistant Professor",
     "group": "Visiting appointment",
     "kind": "title",
@@ -621,28 +555,28 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "15": {
-    "id": 15,
+  "16": {
+    "id": 16,
     "title": "Contact GELL",
     "group": "Student or postdoctoral appointment",
     "kind": "contact",
     "contactOnly": true,
     "criteria": [
-      "A visiting or courtesy appointment is under consideration, but the candidate does not have a primary JHU appointment or one of the listed outside professorial titles. Their proposed WSE role is a student or postdoc."
+      "A visiting appointment is under consideration and the proposed WSE role is a student or postdoc."
     ],
-    "detail": "The revised decision tree directs this appointment to GELL.",
+    "detail": "Contact GELL at wsepostdocappts@jhu.edu",
     "procedures": [],
     "resources": [],
     "nextStep": "Contact GELL for the appropriate student or postdoctoral appointment process.",
     "contactName": "GELL",
     "email": "wsepostdocappts@jhu.edu"
   },
-  "17": {
-    "id": 17,
+  "18": {
+    "id": 18,
     "title": "Visiting Scholar",
     "group": "Visiting appointment",
     "kind": "title",
@@ -663,12 +597,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "18": {
-    "id": 18,
+  "19": {
+    "id": 19,
     "title": "Whiting Fellow",
     "group": "Courtesy appointment",
     "kind": "title",
@@ -689,12 +623,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "20": {
-    "id": 20,
+  "21": {
+    "id": 21,
     "title": "Professor of the Practice",
     "group": "Professor of the Practice",
     "kind": "title",
@@ -725,7 +659,7 @@ export const outcomes = {
       }
     ],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
@@ -761,12 +695,12 @@ export const outcomes = {
       }
     ],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "28": {
-    "id": 28,
+  "27": {
+    "id": 27,
     "title": "Associate Teaching Professor",
     "group": "Teaching Professor track",
     "kind": "title",
@@ -796,12 +730,12 @@ export const outcomes = {
       }
     ],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "30": {
-    "id": 30,
+  "28": {
+    "id": 28,
     "title": "Assistant Teaching Professor",
     "group": "Teaching Professor track",
     "kind": "title",
@@ -824,12 +758,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "33": {
-    "id": 33,
+  "31": {
+    "id": 31,
     "title": "Senior Lecturer",
     "group": "Lecturer track",
     "kind": "title",
@@ -849,12 +783,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "35": {
-    "id": 35,
+  "32": {
+    "id": 32,
     "title": "Lecturer",
     "group": "Lecturer track",
     "kind": "title",
@@ -874,12 +808,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "40": {
-    "id": 40,
+  "36": {
+    "id": 36,
     "title": "Research Professor",
     "group": "Research Professor track",
     "kind": "title",
@@ -912,21 +846,21 @@ export const outcomes = {
       }
     ],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true,
     "alternativePathway": {
-      "heading": "Incoming or outgoing tenure-track faculty",
+      "heading": "Temporary incoming or outgoing tenure-track appointments",
       "criteria": [
-        "If the candidate is an incoming or outgoing tenure-track faculty member at the Professor rank:"
+        "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Professor rank."
       ],
       "procedures": [
         "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
       ]
     }
   },
-  "42": {
-    "id": 42,
+  "37": {
+    "id": 37,
     "title": "Associate Research Professor",
     "group": "Research Professor track",
     "kind": "title",
@@ -959,21 +893,21 @@ export const outcomes = {
       }
     ],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true,
     "alternativePathway": {
-      "heading": "Incoming or outgoing tenure-track faculty",
+      "heading": "Temporary incoming or outgoing tenure-track appointments",
       "criteria": [
-        "If the candidate is an incoming or outgoing tenure-track faculty member at the Associate Professor rank:"
+        "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Associate Professor rank."
       ],
       "procedures": [
         "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
       ]
     }
   },
-  "44": {
-    "id": 44,
+  "38": {
+    "id": 38,
     "title": "Assistant Research Professor",
     "group": "Research Professor track",
     "kind": "title",
@@ -998,21 +932,21 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true,
     "alternativePathway": {
-      "heading": "Incoming or outgoing tenure-track faculty",
+      "heading": "Temporary incoming or outgoing tenure-track appointments",
       "criteria": [
-        "If the candidate is an incoming or outgoing tenure-track faculty member at the Assistant Professor rank:"
+        "This is a temporary appointment for an incoming or outgoing tenure-track faculty member at the Assistant Professor rank."
       ],
       "procedures": [
         "The dossier includes a department request and CV. No faculty vote is required. Please note in SmartPath that this appointment is for a tenure track faculty member."
       ]
     }
   },
-  "47": {
-    "id": 47,
+  "41": {
+    "id": 41,
     "title": "Senior Research Engineer/Scientist",
     "group": "Research Scientist/Engineer track",
     "kind": "title",
@@ -1035,12 +969,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "49": {
-    "id": 49,
+  "42": {
+    "id": 42,
     "title": "Associate Research Engineer/Scientist",
     "group": "Research Scientist/Engineer track",
     "kind": "title",
@@ -1063,12 +997,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "51": {
-    "id": 51,
+  "43": {
+    "id": 43,
     "title": "Assistant Research Engineer/Scientist",
     "group": "Research Scientist/Engineer track",
     "kind": "title",
@@ -1091,12 +1025,12 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "53": {
-    "id": 53,
+  "44": {
+    "id": 44,
     "title": "Homewood Professor",
     "group": "Distinguished appointment",
     "kind": "title",
@@ -1119,47 +1053,29 @@ export const outcomes = {
     ],
     "resources": [],
     "nextStep": "Start an appointment request in SmartPath.",
-    "contactName": "Kirstin Brooks-Robinson",
+    "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu",
     "directory": true
   },
-  "54": {
-    "id": 54,
+  "45": {
+    "id": 45,
     "title": "Connect with Faculty Affairs",
     "group": "Appointment review",
     "kind": "contact",
     "criteria": [
       "The answers along this decision path do not establish an appropriate faculty title. Review the selected criteria with the Office of Faculty Affairs."
     ],
-    "detail": "Contact the Office of Faculty Affairs for guidance on the appropriate appointment.",
+    "detail": "Contact the Office of Faculty Affairs at wseacademicappta@jhu.edu.",
     "procedures": [],
     "resources": [],
     "nextStep": "Discuss the proposed appointment with the Office of Faculty Affairs.",
     "contactName": "Office of Faculty Affairs",
     "email": "wseacademicappta@jhu.edu"
-  },
-  "55": {
-    "id": 55,
-    "title": "Review the secondary appointment title",
-    "group": "Internal JHU courtesy appointment",
-    "kind": "guidance",
-    "guidanceOnly": true,
-    "criteria": [
-      "This is a visiting or courtesy appointment for someone with a primary JHU appointment in APL or HLTCOE. The secondary title differs from the primary appointment title."
-    ],
-    "detail": "If the secondary appointment title is different from the primary appointment title: Review the criteria, dossier requirements, and submission procedures for the secondary appointment title in the “Title directory” tab.",
-    "procedures": [],
-    "resources": [],
-    "nextStep": "Review the secondary title’s criteria, dossier requirements, and submission procedures in the Title directory.",
-    "actionLabel": "Open Title directory",
-    "actionUrl": "#directory",
-    "contactName": "Office of Faculty Affairs",
-    "email": "wseacademicappta@jhu.edu"
   }
 };
-export const directoryIds = [40,42,44,11,12,13,17,18,20,26,28,30,33,35,47,49,51,53];
+export const directoryIds = [36,37,38,12,13,14,18,19,21,26,27,28,31,32,41,42,43,44];
 export const permissionLabels = ['Master’s theses supervision','Doctoral theses supervision','Postdoctoral fellows supervision','Principal investigator'];
-export const routingNotes = ['Question 21 No leads to question 36, retaining the source’s research-compensation checkpoint and Homewood route.'];
+export const routingNotes = ["Per user clarification on November 17, the visiting student/postdoc check precedes the engineering-degree check: step 11 No goes to 15, and step 15 No goes to 17.","The some-teaching-experience choice at step 25 omits a destination in the document; it leads to Assistant Teaching Professor at step 28, whose criterion matches that choice."];
 export function resolvePath(history) {
   if (!Array.isArray(history)) throw new Error('Invalid decision path');
   let id = 1;
