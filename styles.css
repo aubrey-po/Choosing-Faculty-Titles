@@ -44,3 +44,5 @@ dialog{width:800px}.dialog-detail{font-size:15px}.appointment-next-step h4{font-
 .criteria-options .answer-symbol{margin-top:3px}
 .criteria-options .answer-card>svg{margin-top:7px}
 .criteria-options .answer-card>span:nth-child(2){min-width:0}
+
+.committee-note{display:block;margin-top:12px;line-height:1.75}

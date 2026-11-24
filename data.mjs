@@ -1,4 +1,4 @@
-// Generated from the revised Word outline updated November 17, 2026.
+// Generated from the revised Word outline updated November 24, 2026.
 export const EMAIL = 'wseacademicappta@jhu.edu';
 export const CONTACT_NAME = 'Office of Faculty Affairs';
 export const APPOINTMENT_NEXT_STEP = 'Start an appointment request in SmartPath.';
@@ -174,7 +174,7 @@ export const questions = {
         "short": "Non-academic reputation and leadership"
       },
       {
-        "label": "They are of the caliber of members of the National Academy of Sciences or National Academy of Engineering",
+        "label": "The faculty member is of the caliber of members of the National Academic of Sciences or National Academy of Engineering",
         "next": 44,
         "short": "National Academy caliber"
       },
@@ -496,7 +496,7 @@ export const outcomes = {
     "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV.",
-      "All tenured faculty (or a standing committee) must vote.",
+      "All tenured faculty must vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; and 3) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [],
@@ -523,7 +523,7 @@ export const outcomes = {
     "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV.",
-      "All tenured faculty (or a standing committee) must vote.",
+      "All tenured faculty must vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; and 3) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [],
@@ -550,7 +550,7 @@ export const outcomes = {
     "privilegeNotes": [],
     "procedures": [
       "The dossier includes a department request and CV.",
-      "All tenured faculty (or a standing committee) must vote.",
+      "All tenured faculty must vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; and 3) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [],
@@ -645,7 +645,7 @@ export const outcomes = {
     "privilegeNotes": [],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of three external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty at the full professor rank are required to vote.",
+      "All full-time professorial track faculty at the full professor rank are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; 3) a summary of referee feedback; and 4) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [
@@ -681,7 +681,7 @@ export const outcomes = {
     "privilegeNotes": [],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of four external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty at the full professor rank are required to vote.",
+      "All full-time professorial track faculty at the full professor rank are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; 3) a summary of referee feedback; and 4) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [
@@ -717,7 +717,7 @@ export const outcomes = {
     "privilegeNotes": [],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of three external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty at the full or associate professor rank are required to vote."
+      "All full-time professorial track faculty at the full or associate professor rank are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track"
     ],
     "resources": [
       {
@@ -753,7 +753,7 @@ export const outcomes = {
     "procedures": [
       "The dossier includes a department request, CV, external evaluations, correspondence with referees, and teaching dossier.",
       "The Department or Unit Head/Director solicits enough referees to obtain a minimum of three external evaluations. There is no standard template letter. These evaluators should be external to the candidate’s department or unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty are required to vote.",
+      "All full-time professorial track faculty are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; and 3) a summary of the candidate’s qualifications. Faculty who oppose the appointment must jointly write and sign a minority memo to accompany the department/unit’s report."
     ],
     "resources": [],
@@ -832,7 +832,7 @@ export const outcomes = {
     ],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of four external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty at the full professor rank are required to vote.",
+      "All full-time professorial track faculty at the full professor rank are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; 3) a summary of referee feedback; and 4) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [
@@ -877,7 +877,7 @@ export const outcomes = {
     ],
     "procedures": [
       "The Department or Unit Head/Director solicits enough referees, using the template provided by the APT Council, to obtain a minimum of three external evaluations. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty at the full and associate professor rank are required to vote.",
+      "All full-time professorial track faculty at the full and associate professor rank are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter of the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; 3) a summary of referee feedback; and 4) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department’s letter."
     ],
     "resources": [
@@ -923,7 +923,7 @@ export const outcomes = {
     "procedures": [
       "The dossier includes a department request, CV, external evaluations, correspondence with referees, and research statement.",
       "The Department or Unit Head/Director solicits enough referees to obtain a minimum of three external evaluations. There is no standard template letter. At least one, and preferably more, of these evaluators should be external to the candidate’s current and previous department(s) and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty are required to vote.",
+      "All full-time professorial track faculty are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; 3) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [],
@@ -1042,7 +1042,7 @@ export const outcomes = {
     "procedures": [
       "The dossier includes a department request and CV. There is no standard template letter.",
       "The Department or Unit Head/Director solicits enough referees to obtain a minimum of three external evaluations. There is no standard template letter. These evaluators should be external to the candidate’s department/unit and must have sufficient expertise to judge the candidate in a rigorous, fair, and impartial way. Academic referees should generally be individuals based at leading departments or institutions, or from equivalent leadership positions in industry or government when appropriate.",
-      "All full-time professorial track faculty are required to vote.",
+      "All full-time professorial track faculty are required to vote.\n\n*If there are fewer than three faculty in the unit at the required rank(s), a standing committee including faculty from other units may vote. A standing A&P committee should include at least three faculty members. When possible, the standing A&P committee should include at least one faculty member from the candidate’s unit at or above the aspirational rank within the track. If there are no willing faculty from the candidate’s unit at or above the aspirational rank within the track, the committee may include a faculty member from the unit at the next highest rank within the track",
       "If the faculty vote in favor of the appointment, the Department or Unit Head/Director writes a letter to the Dean, including: 1) a tally of the department/unit’s vote (e.g., 12 in favor and none opposed); 2) a statement on professionalism; and 3) a summary of the candidate’s qualifications. Faculty who oppose the majority decision must jointly write and sign a minority memo, describing the grounds for the minority opinion, to accompany the department/unit’s letter."
     ],
     "resources": [],

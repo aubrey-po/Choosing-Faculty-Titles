@@ -1,4 +1,4 @@
-import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=20261117-temporary';
+import {EMAIL, SMARTPATH_URL, PROCEDURES_URL, TENURE_EMAIL, questions, outcomes, directoryIds, permissionLabels, resolvePath} from './data.mjs?v=20261124-committee';
 
 const $ = s => document.querySelector(s);
 const esc = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -29,9 +29,13 @@ function resultContent(rank) {
   if(rank.guidanceOnly) return `${(rank.guidanceParagraphs||[rank.detail]).map(text=>`<p class="result-lead">${esc(text)}</p>`).join('')}<div class="result-tools guidance-action">${guidanceActions(rank).map(action=>`<a class="button primary" href="${esc(action.url)}">${esc(action.label)} ${arrow}</a>`).join('')}</div>`;
   return `<p class="result-lead">${esc(rank.recommendation || (rank.kind==='title'?'Based on your answers, this title seems like the best fit.':'Review the criteria and next steps for this appointment.'))}</p>${criteriaSection(rank)}${rank.permissions?'<h3 class="section-caption">Privileges at a glance</h3>':''}${permissionGrid(rank)}${privilegeInformation(rank)}${appointmentNextStep(rank)}`;
 }
+function procedureText(text) {
+  const [instruction,...notes]=text.split('\n\n');
+  return esc(instruction)+notes.map(note=>`<span class="committee-note" role="note">${esc(note)}</span>`).join('');
+}
 function procedureList(steps) {
-  if(steps.length===1) return `<p class="procedure-single">${esc(steps[0])}</p>`;
-  return steps.length?`<ol class="procedure-list">${steps.map(text=>`<li>${esc(text)}</li>`).join('')}</ol>`:'';
+  if(steps.length===1) return `<p class="procedure-single">${procedureText(steps[0])}</p>`;
+  return steps.length?`<ol class="procedure-list">${steps.map(text=>`<li>${procedureText(text)}</li>`).join('')}</ol>`:'';
 }
 function appointmentNextStep(rank, includeAlternative=false) {
   const resources=rank.resources?.length?`<div class="procedure-resources">${rank.resources.map(resource=>`<a href="${esc(resource.url)}" target="_blank" rel="noopener noreferrer">${esc(resource.label)} <span aria-hidden="true">↗</span></a>`).join('')}</div>`:'';
@@ -72,7 +76,7 @@ function summaryText() {
   if(current.contactOnly) return `Whiting School of Engineering\n\n${current.title}\n${current.email}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}`;
   const privileges=current.permissions?`\n\nPrivileges at a glance\n${current.permissions.map((value,i)=>`${permissionLabels[i]}: ${value}`).join('\n')}`:'';
   const extraInformation=current.permissions?(current.privilegeNotes||[]).join('\n'):current.detail;
-  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${extraInformation}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline updated November 17, 2026).`;
+  return `Whiting School of Engineering\nFaculty title recommendation\n\n${current.title}\n\nCriteria\n${current.criteria.join('\n')}${privileges}\n\n${extraInformation}\n\nNext steps\n${current.nextStep}${current.nextStep.includes('SmartPath')?'\n'+SMARTPATH_URL:''}\n${current.procedures.map((text,i)=>(current.procedures.length>1?`${i+1}. `:'')+text).join('\n')}\n${current.resources.map(resource=>`${resource.label}: ${resource.url}`).join('\n')}${current.sourceNote?'\n'+current.sourceNote:''}\n\nDirect questions to: ${current.email}\nFull policies and procedures: ${PROCEDURES_URL}\n\nDecision path\n${history.map((item,i)=>`${i+1}. ${questions[item.id].title}\n   ${questions[item.id].options[item.choice].label}`).join('\n')}\n\nFor tenure track help, contact ${TENURE_EMAIL}\nSource: Decision Tree for Choosing Titles (revised outline updated November 24, 2026).`;
 }
 async function copyRecommendation() {
   const content=summaryText();
